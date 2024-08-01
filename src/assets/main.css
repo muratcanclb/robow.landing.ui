@@ -1,0 +1,38 @@
+
+.header {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0; 
+}
+
+.transform {
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.z-0 {
+    z-index: 0;
+}
+.top-0 {
+    top: 0px;
+}
+.bottom-0 {
+    bottom: 0px;
+}
+.absolute {
+    position: absolute;
+}
+@media (min-width: 1024px) {
+    .lg\:w-\[1600px\] {
+        width: 1600px;
+    }
+}
+@media (min-width: 768px) {
+    .md\:w-\[1200px\] {
+        width: 1200px;
+    }
+}
