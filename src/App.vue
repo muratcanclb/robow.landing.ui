@@ -15,19 +15,37 @@ export default {
 </script>
 
 <template>
-  <div class="relative">
+  <body>
     <div v-if="!isMobile()"
-      class="absolute top-0 bottom-0 mx-auto left-1/2 transform -translate-x-1/2 z-0 w-full md:w-[1200px] lg:w-[1600px] max-w-screen">
-      <img src="../public/img/pcBg.svg" class="hidden lg:block w-full h-full object-cover" alt="Shapes">
+      class="bodyPc">
       <RouterView />
-      
+
     </div>
     <div v-else
-      class="absolute top-0 bottom-0 mx-auto left-1/2 transform -translate-x-1/2 z-0 w-full md:w-[1200px] lg:w-[1600px] max-w-screen">
-      <!-- Mobile View-->
-      <img src="https://www.letsjive.io/images/marketing/home-shapes-full.svg"
-        class="hidden lg:block w-full h-full object-cover" alt="Shapes">
+      class="bodyMb">
       <RouterView />
     </div>
-  </div>
+  </body>
 </template>
+
+<style>
+body,html{
+  height: 100%;
+  margin: 0%;
+}
+.bodyPc {
+  background-image: url('/img/pcBg.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.bodyMb {
+  background-image: url('/img/mobileBg.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+</style>
